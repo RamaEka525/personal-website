@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ark Survival</title>
+    <link rel="stylesheet" href="style3.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <a href="index.html" style="text-decoration: none;" class="backk">
+        <div class="back">
+            <i class="ph ph-arrow-left"></i>
+            Back to Home
+        </div>
+    </a>
+
+    <div class="bg"></div>
+    <img src="ark.webp">
+    <div class="container">
+        <div class="sideBox">
+            <div id="compy" class="box" onclick="showPopup(this)"><h2>Compy (Compsognathus)</h2></div>
+            <div id="Dilophosaurus" class="box" onclick="showPopup(this)"><h2>Dilophosaurus</h2></div>
+        </div>
+        <div class="sideBox">
+            <div id="Diplodocus" class="box" onclick="showPopup(this)"><h2>Diplodocus</h2></div>
+            <div id="Giganotosaurus" class="box" onclick="showPopup(this)"><h2>Giganotosaurus</h2></div>
+        </div>
+        <div class="sideBox">
+            <div id="Iguanodon" class="box" onclick="showPopup(this)"><h2>Iguanodon</h2></div>
+            <div id="spinosaurus" class="box" onclick="showPopup(this)"><h2>Spinosaurus</h2></div>
+        </div>
+        <div class="sideBox">
+            <div id="Yutyrannus" class="box" onclick="showPopup(this)"><h2>Yutyrannus</h2></div>
+            <div id="Kentrosaurus" class="box" onclick="showPopup(this)"><h2>Kentrosaurus</h2></div>  
+        </div>
+    </div>
+
+    <div id="popup" class="popup">
+        <span id="close-button" class="close" onclick="hidePopup()">&times;</span>
+        <div class="popup-content" id="popup-content"></div>
+    </div>
+
+    <script src="script3.js"></script>
+</body>
+</html>
+

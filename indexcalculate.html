@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style1.css">
+    <script src="script1.js"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+</head>
+<body>
+    <a href="index.html" style="text-decoration: none;" class="backk">
+        <div class="back">
+            <i class="ph ph-arrow-left"></i>
+            Back to Home
+        </div>
+    </a>
+
+    <div class="bg">
+        <h1>Calculator</h1>
+        <div class="input">
+            <input type="number" id="angkaPertama" placeholder="Masukkan angka pertama" required>
+        </div>
+        <div class="input">
+            <input type="number" id="angkaKedua" placeholder="Masukkan angka kedua" required> 
+        </div>
+            
+        <div class="sistem">
+            <button onclick="hitung('+')">+</button>
+            <button onclick="hitung('-')">-</button>
+            <button onclick="hitung('*')">*</button>
+            <button onclick="hitung('/')">/</button> 
+        </div>
+        
+
+        <div class="hasil">
+            <h2>hasil : <div id="hasil"></div></h2> 
+        </div>
+        
+    </div>
+    
+    
+</body>
+</html>
