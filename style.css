@@ -30,26 +30,22 @@ nav {
     justify-content: space-between;
     padding: 0 18px;
 }
-
 .burger-icon {
     display: none;
     flex-direction: column;
     cursor: pointer;
 }
-
 .burger-icon .line {
     width: 25px;
     height: 3px;
     background-color: aliceblue;
     margin: 4px 0;
 }
-
 .menu-list {
     display: flex;
     gap: 50px;
     list-style: none;
 }
-
 nav .logo  {
     display: flex;
     align-items: center;
@@ -129,12 +125,10 @@ header .box-wrapper .box{
     color: aliceblue;
     margin-top: 130px;
     margin-right: 20px;
-    /* text-align: center; */
     background: linear-gradient(to right, black, var(--mainColor-));
     width: 60vw;
     height: 200px;
     border-radius: 0 10px 10px 0;
-    /* display: flex; */
     align-items:center ;
     justify-content: flex-end;
     padding-right: 50px;
@@ -175,9 +169,6 @@ header .description{
 }
 header .content2{
     padding-left: 120px;
-}
-header .line{
-    border-left: 1px solid var(--mainColor-);
 }
 header .content-wrapper .contact-wrapper{
     display: flex;
@@ -510,6 +501,12 @@ footer .text-center{
 }
 
 @media (max-width: 375px) {
+    .navbar .logo .caption{
+        font-size:  1rem;
+    }
+    .navbar {
+        padding: 0px 0px !important;
+    }
     nav .menu-list ul.menu {
         flex-direction: column;
         align-items: center;
@@ -536,35 +533,30 @@ footer .text-center{
         padding: 15px;
         text-align: center;
     }
-    y
     .content-wrapper, .box-wrapper, .container-box {
         flex-direction: column;
-        align-items: center;
     }
-    .background-img {
-        display: none;
-    }
-    .content2, .content {
-        text-align: center;
-    }
-    
-    header .box-wrapper .box .content .nameTitle .text{
-        font-size: 14pt;
-        width: fit-content;
-        height: fit-content;
-    }
-    .header .line{
-        opacity: 0;
+
+    .profil{
+    display: flex;
+    justify-content: center;
     }
 
     .profil img{
         width: 60vw;
         margin-top: 70px;
     }
+    header .content-wrapper .content{
+        display: flex;
+        justify-content: center;
+    }
     header .box-wrapper .box{
         margin: 20px 0 0 0;
         padding: 10px;
+        border-radius:10px 10px 0 0;
+        background: linear-gradient(to top, black, var(--mainColor-));
     }
+
 
     #title {
         font-size: 15px;
@@ -575,12 +567,37 @@ footer .text-center{
         height: 40px;
     }
 
+
+    
+    header .greeting{
+        font-size: 0.6rem !important;
+    }
+    header .title-name{
+        font-size: 2rem !important;
+    }
     header .description{
-        line-height: 40px;
-        font-size: 10px;
+        line-height: 15px;
+        font-size: 0.543rem !important;
+    }
+    header .moto{
+        margin-top: 20px;
+        line-height: 17px;
+        font-size: 11px;
     }
 
-    header .moto{
-        font-size: 11px;
+    header .content2{
+        padding-left: 0;
+        display: flex;
+        justify-content: center !important;
+    }
+    header .content-wrapper .contact-wrapper{
+        justify-content: center;
+        padding: 18px 0 0 0 ;
+        color: var(--mainColor-);
+        border-top: 2px solid var(--mainColor-) !important;
+        border-left: 0 solid var(--mainColor-);
+    }
+    header .content-wrapper .contact-wrapper i,p{
+        font-size: 0.8rem !important;
     }
 }
