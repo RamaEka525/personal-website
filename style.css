@@ -568,7 +568,10 @@ footer .text-center{
     }
 
 
-    
+    header .content-wrapper .content {
+        display: flex;
+        align-items: center;
+    }
     header .greeting{
         font-size: 0.6rem !important;
     }
