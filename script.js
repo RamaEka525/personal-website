@@ -17,10 +17,14 @@ document.addEventListener("DOMContentLoaded", function () {
     boxes.forEach(box => {
         observer.observe(box);
     });
+});
 
-    // Burger Menu for mobile view
+document.addEventListener("DOMContentLoaded", function () {
+    const nav = document.querySelector("nav");
     const burgerIcon = document.querySelector(".burger-icon");
+    const menuList = document.querySelector(".menu-list");
+
     burgerIcon.addEventListener("click", () => {
-        nav.classList.toggle("active");
+        menuList.classList.toggle("active");
     });
 });
