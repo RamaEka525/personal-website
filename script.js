@@ -1,9 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
     const nav = document.querySelector("nav");
     const boxes = document.querySelectorAll(".box");
+    const burgerIcon = document.querySelector(".burger-icon");
+    const menuList = document.querySelector(".menu-list");
     const observerOptions = {
         threshold: 0.1
     };
+    burgerIcon.addEventListener("click", () => {
+        menuList.classList.toggle("active");
+    });
     
     function animateOnScroll(entries, observer) {
         entries.forEach(entry => {
@@ -16,15 +21,5 @@ document.addEventListener("DOMContentLoaded", function () {
     const observer = new IntersectionObserver(animateOnScroll, observerOptions);
     boxes.forEach(box => {
         observer.observe(box);
-    });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    const nav = document.querySelector("nav");
-    const burgerIcon = document.querySelector(".burger-icon");
-    const menuList = document.querySelector(".menu-list");
-
-    burgerIcon.addEventListener("click", () => {
-        menuList.classList.toggle("active");
     });
 });
