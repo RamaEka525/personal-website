@@ -16,7 +16,7 @@
     padding: 0 !important;
     margin: 0 !important;
 }
-nav{
+nav {
     color: aliceblue;
     position: fixed;
     top: 0;
@@ -28,6 +28,26 @@ nav{
     box-shadow: 0 0 10px var(--mainColor-);
     z-index: 1;
     justify-content: space-between;
+    padding: 0 18px;
+}
+
+.burger-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger-icon .line {
+    width: 25px;
+    height: 3px;
+    background-color: aliceblue;
+    margin: 4px 0;
+}
+
+.menu-list {
+    display: flex;
+    gap: 50px;
+    list-style: none;
 }
 
 nav .logo  {
@@ -489,18 +509,34 @@ footer .text-center{
     justify-content: center !important;
 }
 
-@media (max-width: 844px) {
+@media (max-width: 375px) {
     nav .menu-list ul.menu {
         flex-direction: column;
         align-items: center;
     }
-    nav .menu-list {
-        display: none;
-        flex-direction: column;
-    }
-    nav.active .menu-list {
+    .burger-icon {
         display: flex;
     }
+
+    .menu-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: var(--secondaryColor-);
+        width: 100%;
+    }
+
+    .menu-list.active {
+        display: flex;
+    }
+
+    .nav-pills .nav-link {
+        padding: 15px;
+        text-align: center;
+    }
+    y
     .content-wrapper, .box-wrapper, .container-box {
         flex-direction: column;
         align-items: center;
