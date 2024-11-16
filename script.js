@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const nav = document.querySelector("nav");
     const boxes = document.querySelectorAll(".box");
     const burgerIcon = document.querySelector(".burger-icon");
     const menuList = document.querySelector(".menu-list");
@@ -10,10 +9,12 @@ document.addEventListener("DOMContentLoaded", function () {
     
     burgerIcon.addEventListener("click", () => {
         menuList.classList.toggle("active");
+        burgerIcon.classList.toggle("active");
     });
     navLinks.forEach(link => {
         link.addEventListener("click", () => {
             menuList.classList.remove("active");
+            burgerIcon.classList.remove("active");
         });
     });
     
