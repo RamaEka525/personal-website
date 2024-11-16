@@ -16,6 +16,12 @@
     padding: 0 !important;
     margin: 0 !important;
 }
+.px-18{
+    padding: 0 18px !important;
+}
+.ac-center{
+    align-content: center !important;
+}
 nav {
     color: aliceblue;
     position: fixed;
@@ -246,7 +252,7 @@ header .gradient{
     border-radius: 50%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     box-shadow: 0 0 50px #f59f0086; 
     float: left;
     shape-outside: circle(50%);
@@ -257,14 +263,33 @@ header .gradient{
     white-space: nowrap;
 }
 .introduction .description p{
-    width: 200vh;
+    width: 140vh;
 }
 
+.about-me-container{
+    padding: 27px 45px !important;
+}
 .introduction img{
-    margin-top: 55px;
+    /* margin-top: 55px; */
     width: 300px;
     height: 300px;
     clip-path: polygon(54% 10%, 86% 27%, 94% 61%, 71% 95%, 24% 86%, 13% 49%, 18% 20%);
+}
+.introduction-img{
+    /* margin-top: 55px; */
+    width: 300px;
+    height: 300px;
+    clip-path: polygon(54% 10%, 86% 27%, 94% 61%, 71% 95%, 24% 86%, 13% 49%, 18% 20%);
+}
+
+.card-circle{
+    place-self: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 500px;
+    align-content: center;
+    justify-items: center;
+    box-shadow: 0 0 50px #f59f0086;
 }
 
 .introduction .gradient{
@@ -273,7 +298,7 @@ header .gradient{
     background: linear-gradient(to bottom, #0f0d00, #2c2600);
 }
 
-.container-box{
+.education .container-box{
     margin-bottom: 40px;
     display: flex;
     justify-content:space-evenly;
@@ -354,22 +379,22 @@ header .gradient{
 }
 .skill .bar{
     background-color: #181818;
-    width: 100vh;
+    width: 100%;
     height: 20px;
 }
 .skill .bar .in-bar-HTML{
     background-color: var(--mainColor-);
-    width: 80vh;
+    width: 80%;
     height: 20px;
 }
 .skill .bar .in-bar-CSS{
     background-color: var(--mainColor-);
-    width: 70vh;
+    width: 70%;
     height: 20px;
 }
 .skill .bar .in-bar-JavaScript{
     background-color: var(--mainColor-);
-    width: 60vh;
+    width: 60%;
     height: 20px;
 }
 .skill .background-img{
@@ -380,6 +405,11 @@ header .gradient{
     align-content: center;
     border-radius: 0 50px 50px 0;
 }
+
+.skill .header-box img{
+    display: none;
+}
+
 .skill img{
     width: 200px;
     height: 75%;
@@ -428,8 +458,16 @@ header .gradient{
     align-items: center;
     gap: 50px;
 }
+.project h3{
+    padding-left: 10px;
+    background: linear-gradient(to right, var(--mainColor-),#2c2600 );
+}
 .project .box{
     width: 120vh;
+    padding: 10px 0;
+}
+.project .box .header-box img{
+    display: none;
 }
 .project .bar{
     background-color: #181818;
@@ -500,7 +538,7 @@ footer .text-center{
     justify-content: center !important;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 425px) {
     .navbar .logo .caption{
         font-size:  1rem;
     }
@@ -546,9 +584,9 @@ footer .text-center{
         width: 60vw;
         margin-top: 70px;
     }
-    header .content-wrapper .content{
+    header .content-wrapper .content {
         display: flex;
-        justify-content: center;
+       justify-content: center;
     }
     header .box-wrapper .box{
         margin: 20px 0 0 0;
@@ -568,10 +606,7 @@ footer .text-center{
     }
 
 
-    header .content-wrapper .content {
-        display: flex;
-        align-items: center;
-    }
+    
     header .greeting{
         font-size: 0.6rem !important;
     }
@@ -603,4 +638,125 @@ footer .text-center{
     header .content-wrapper .contact-wrapper i,p{
         font-size: 0.8rem !important;
     }
+
+    .introduction .box{
+        justify-content: center !important;
+        float: none;
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+        width: 0px !important;
+    }
+    .introduction .box .center{
+        display: flex;
+        justify-content: center;
+    }
+    .introduction .circle{
+        height: 100px;
+        width: 100px;
+    }
+    .introduction .circle h3{
+        font-size: 1rem !important;
+    }
+    .introduction .card-circle{
+        width: 150px;
+        height: 100px;
+        margin-bottom: 10px;
+    }
+
+    .introduction img{
+        width: 190px;
+        height: 190px;
+    }
+
+    .introduction .description p{
+        max-width: 90vh;
+        font-size: 0.3rem !important;
+    }
+    .introduction .box-content{
+        left: 0;
+    }
+
+    .education .box{
+        height: 250px;
+        width: 250px;
+        padding: 14px;
+    }
+    .education .container-box{
+        align-items: center !important;
+        padding: 0 40px;
+        margin: 10px;
+        gap: 10px;
+    }
+
+    .skill .header h1{
+        font-size: 2rem;
+    }
+    .skill .header .line{
+        width: 120px;
+    }
+    .skill .container-wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        margin-bottom: 20px ;
+    }
+    .skill .container-wrapper2{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+    .skill .box{
+        width: 100%;
+    }
+    .skill .header-box{
+        display: flex;
+        align-items: center;
+        gap: 10%;
+        padding: 10px 0;
+        text-shadow: 2px 2px 1px #f59f00;
+    }
+    .skill .header-box img {
+        width: 20%;
+        display: block;
+    }
+
+    .skill .background-img{
+       display: none !important;
+    }
+    .skill .bar{
+        background-color: #181818;
+        width: 100%;
+        height: 10px;
+        margin-bottom: 10px;
+    }
+    .skill .bar .in-bar-HTML{
+        width: 80%;
+        height: 10px;
+    }
+    .skill .bar .in-bar-CSS{
+        width: 70%;
+        height: 10px;
+    }
+    .skill .bar .in-bar-JavaScript{
+        width: 60%;
+        height: 10px;
+    }
+
+    .project .background{
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    .project .background-img{
+        display: none;
+    }
+
+    .project .box .header-box img{
+        display: block;
+        width: 100%;
+        border-radius: 50px;
+        margin-bottom: 10px
+    }
+
 }
