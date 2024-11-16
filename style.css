@@ -50,6 +50,9 @@ nav {
     margin: 4px 0;
     transition: all 0.3s ease;
 }
+.burger-icon.active .line{
+    background-color: var(--mainColor-) !important;
+}
 
 .menu-list {
     display: flex;
@@ -57,7 +60,7 @@ nav {
     list-style: none;
 }
 .menu-list.active {
-    display: flex; /* Tampilkan menu saat aktif */
+    display: flex;
 }
 
 nav .logo  {
@@ -116,9 +119,9 @@ nav .menu {
     left: 0;
 }
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-    color: var(--bs-nav-pills-link-active-color);
+    color: var(--mainColor-) !important;
     background-color: #80808000 !important;
-    border-bottom: 2px solid orange;
+    border-bottom: 2px solid var(--mainColor-);
     border-radius: 0 !important;
     transition: width 0.3s ease, left 0.3s ease;
 }
@@ -591,7 +594,6 @@ footer .text-center{
     }
 
     .menu-list {
-        display: none;
         flex-direction: column;
         position: absolute;
         top: 60px;
@@ -603,10 +605,13 @@ footer .text-center{
         z-index: 10;
         border-radius: 0 20px 20px 0;
         box-shadow: 5px 5px 10px black;
+        transform: translateX(-200px);
+        transition: all 1s ease-in-out;
     }
 
     .menu-list.active {
-        display: flex;
+        transform: translateX(0px);
+
     }
 
     .nav-pills .nav-link {
